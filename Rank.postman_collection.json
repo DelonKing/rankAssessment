@@ -9,39 +9,131 @@
 			"name": "GETBALANCE",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/getBalance/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"getBalance",
+						"1"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "makeBet",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\t{ \"transactionId\":\"12345678910\",\n\t  \"playerId\":1,\n\t  \"wagerAmount\" : 0.5\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/placewager",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"placewager"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "logWin",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\t{ \"transactionId\":\"6667\",\n\t  \"playerId\":1,\n\t  \"wagerAmount\" : 0.5,\n      \"winAmount\" :\"1\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/allocatewin",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"allocatewin"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "makeBetPromo",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\t{ \"transactionId\":\"666999990\",\n\t  \"playerId\":1,\n\t  \"wagerAmount\" : 10.0,\n      \"promotionCode\": \"papers\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/placewager",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"placewager"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "GetPlayerBets",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"playerUsername\":\"player_1\",\n    \"password\":\"swordfish\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/playerbets",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"playerbets"
+					]
+				}
 			},
 			"response": []
 		}
